@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    rect { fill: #fbf8f1; } text { fill: #2b2d42; }
+    @media (prefers-color-scheme: dark) { rect { fill: #2e3b32; } text { fill: #f1f0e8; } }
+  </style>
+  <rect width="64" height="64" rx="12"/>
+  <text x="32" y="46" text-anchor="middle" font-family="cursive" font-size="40" font-weight="700">P</text>
+</svg>
