@@ -208,7 +208,12 @@ footer {
   text-shadow: none;
 }
 .doc-page::before { display: none; }          /* no ruled lines / margin */
-.doc-page .doc { max-width: 44rem; padding: 3rem 1.25rem 4rem; }
+.doc-page .doc {
+  max-width: 78rem;               /* use the width, left-aligned */
+  margin: 0;
+  padding: 3rem clamp(1.25rem, 5vw, 5rem) 4rem;
+}
+@media (min-width: 1400px) { .doc-page { font-size: 1.125rem; } }
 .doc-page h1, .doc-page h2, .doc-page th { font-family: inherit; color: var(--ink); }
 .doc-page h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; }
 .doc-page h2 { font-size: 1.35rem; font-weight: 600; margin: 2.5rem 0 0.75rem; }
@@ -216,7 +221,7 @@ footer {
 .doc-page .doc table { font-size: 0.95rem; background: transparent; }
 .doc-page .doc th { font-size: 0.95rem; font-weight: 600; }
 .doc-page .doc th, .doc-page .doc td { border: 1px solid color-mix(in srgb, var(--ink-soft) 45%, transparent); }
-.doc-page footer { padding: 0 1rem 2rem; font-size: 0.9rem; }
+.doc-page footer { text-align: left; padding: 0 clamp(1.25rem, 5vw, 5rem) 2rem; font-size: 0.9rem; }
 @media (max-width: 600px) {
   .doc-page .doc { padding: 2rem 1rem 3rem; }
   .doc-page footer { padding: 0 1rem 2rem; }
